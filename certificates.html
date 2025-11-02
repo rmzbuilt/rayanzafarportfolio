@@ -1,195 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rayan Zafar - Certificates</title>
-    <style>
-        * {margin:0; padding:0; box-sizing:border-box;}
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
-            color: #e0e0e0;
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-        nav {
-            background: rgba(15, 15, 30, 0.95);
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 2px solid #3b82f6;
-            backdrop-filter: blur(10px);
-        }
-        nav .container {display: flex; justify-content: space-between; align-items: center;}
-        .logo {font-size: 1.5rem; font-weight: 700; color: #60a5fa;}
-        .nav-links {display: flex; gap: 30px; list-style: none;}
-        .nav-links a {
-            color: #cbd5e1;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            padding: 8px 16px;
-            border-radius: 6px;
-        }
-        .nav-links a:hover, .nav-links a.active {color: #60a5fa; background: rgba(59, 130, 246, 0.1);}
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: #60a5fa;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        .container {max-width: 1200px; margin: 0 auto; padding: 0 20px;}
-        section {padding: 80px 0;}
-        h1 {
-            font-size: 3rem;
-            text-align: center;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .page-intro {
-            text-align: center;
-            color: #94a3b8;
-            font-size: 1.2rem;
-            margin-bottom: 60px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .certificates-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-        .certificate-card {
-            background: rgba(30, 30, 50, 0.6);
-            padding: 25px;
-            border-radius: 15px;
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            text-align: center;
-        }
-        .certificate-card:hover {
-            transform: translateY(-8px);
-            border-color: #3b82f6;
-            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.3);
-        }
-        .certificate-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            border: 1px solid rgba(59, 130, 246, 0.2);
-        }
-        .certificate-card h3 {font-size: 1.3rem; color: #60a5fa; margin-bottom: 8px;}
-        .certificate-issuer {color: #94a3b8; font-size: 0.95rem; margin-bottom: 10px; font-style: italic;}
-        footer {
-            background: rgba(15, 15, 30, 0.9);
-            padding: 40px 0;
-            text-align: center;
-            border-top: 2px solid #3b82f6;
-            margin-top: 80px;
-        }
-        footer p {color: #94a3b8;}
-        .social-links {margin-top: 20px;}
-        .social-links a {color: #60a5fa; text-decoration: none; margin: 0 15px; font-size: 1.1rem; transition: color 0.3s ease;}
-        .social-links a:hover {color: #3b82f6;}
-        @media(max-width:768px){
-            .mobile-menu-btn{display:block;}
-            .nav-links{
-                display:none;
-                position:absolute;
-                top:70px;
-                left:0;
-                right:0;
-                background: rgba(15,15,30,0.98);
-                flex-direction:column;
-                padding:20px;
-                gap:10px;
-            }
-            .nav-links.active{display:flex;}
-            h1{font-size:2.2rem;}
-            .certificates-grid{grid-template-columns:1fr;}
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rayan Zafar - Certificates</title>
+<style>
+* {margin:0; padding:0; box-sizing:border-box;}
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2f 0%, #2a2a3f 100%);
+    color: #f0f0f0;
+    line-height:1.6;
+    min-height:100vh;
+}
+nav {
+    background: rgba(30,30,50,0.95);
+    padding:20px 0;
+    position: sticky;
+    top:0;
+    z-index:1000;
+    border-bottom: 2px solid #60a5fa;
+    backdrop-filter: blur(10px);
+}
+nav .container {display:flex; justify-content:space-between; align-items:center;}
+.logo {font-size:1.5rem; font-weight:700; color:#60a5fa;}
+.nav-links {display:flex; gap:30px; list-style:none;}
+.nav-links a {color:#d0d0d0; text-decoration:none; font-weight:500; padding:8px 16px; border-radius:6px; transition:all 0.3s ease;}
+.nav-links a:hover, .nav-links a.active {color:#60a5fa; background: rgba(96,165,250,0.1);}
+.mobile-menu-btn {display:none; background:none; border:none; color:#60a5fa; font-size:1.5rem; cursor:pointer;}
+.container {max-width:1200px; margin:0 auto; padding:0 20px;}
+section {padding:80px 0;}
+h1 {font-size:3rem; text-align:center; margin-bottom:20px; background: linear-gradient(135deg,#3b82f6 0%,#60a5fa 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+.page-intro {text-align:center; color:#b0b8c0; font-size:1.2rem; margin-bottom:60px; max-width:700px; margin-left:auto; margin-right:auto;}
+
+/* Certificates grid */
+.certificates-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+}
+
+.certificate-card {
+    background: rgba(40,40,60,0.75);
+    padding:25px 20px;
+    border-radius:20px;
+    border:1px solid rgba(96,165,250,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(12px);
+    text-align:center;
+}
+.certificate-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(96,165,250,0.4);
+}
+.certificate-card img {
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:15px;
+    border:1px solid rgba(96,165,250,0.3);
+    transition: transform 0.3s ease;
+}
+.certificate-card img:hover {
+    transform: scale(1.05);
+}
+
+footer {background: rgba(30,30,50,0.9); padding:40px 0; text-align:center; border-top:2px solid #60a5fa; margin-top:80px;}
+footer p {color:#b0b8c0;}
+.social-links {margin-top:20px;}
+.social-links a {color:#60a5fa; text-decoration:none; margin:0 15px; font-size:1.1rem; transition:0.3s;}
+.social-links a:hover {color:#3b82f6;}
+
+@media(max-width:768px) {
+    .mobile-menu-btn{display:block;}
+    .nav-links{display:none; position:absolute; top:70px; left:0; right:0; background: rgba(30,30,50,0.98); flex-direction:column; padding:20px; gap:10px;}
+    .nav-links.active{display:flex;}
+    h1{font-size:2.2rem;}
+    .certificates-grid{grid-template-columns:1fr;}
+}
+</style>
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <div class="logo">RZ</div>
-            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="accomplishments.html">Accomplishments</a></li>
-                <li><a href="certificates.html" class="active">Certificates</a></li>
-                <li><a href="interests.html">Interests</a></li>
-            </ul>
-        </div>
-    </nav>
+<nav>
+<div class="container">
+<div class="logo">RZ</div>
+<button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="skills.html">Skills</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="accomplishments.html">Accomplishments</a></li>
+<li><a href="certificates.html" class="active">Certificates</a></li>
+<li><a href="interests.html">Interests</a></li>
+</ul>
+</div>
+</nav>
 
-    <section>
-        <div class="container">
-            <h1>Certificates & Courses</h1>
-            <p class="page-intro">Below are my earned certifications and course completions.</p>
+<section>
+<div class="container">
+<h1>My Certificates</h1>
+<p class="page-intro">Here are some of the certificates I've earned while learning new skills and completing projects.</p>
 
-            <div class="certificates-grid">
-                <div class="certificate-card">
-                    <img src="sciencompwithpython.png" alt="Scientific Computing with Python">
-                    <h3>Scientific Computing with Python</h3>
-                    <p class="certificate-issuer">freeCodeCamp</p>
-                </div>
-                <div class="certificate-card">
-                    <img src="maclearningpython.png" alt="Machine Learning with Python">
-                    <h3>Machine Learning with Python</h3>
-                    <p class="certificate-issuer">freeCodeCamp</p>
-                </div>
-                <div class="certificate-card">
-                    <img src="foundationalc#withmicrosoft.png" alt="Foundational C# with Microsoft">
-                    <h3>Foundational C# with Microsoft</h3>
-                    <p class="certificate-issuer">Microsoft Learn</p>
-                </div>
-                <div class="certificate-card">
-                    <img src="spelling bee1.jpg" alt="Spelling Bee Achievement">
-                    <h3>School Spelling Bee Certificate</h3>
-                    <p class="certificate-issuer">Academy 1 Middle School</p>
-                </div>
-                <div class="certificate-card">
-                    <img src="spelling bee2.jpg" alt="Spelling Bee Runner-Up">
-                    <h3>Spelling Bee Finalist</h3>
-                    <p class="certificate-issuer">Academy 1 Middle School</p>
-                </div>
-                <div class="certificate-card">
-                    <img src="spelling bee3.png" alt="Spelling Bee Participation">
-                    <h3>Spelling Bee Participation</h3>
-                    <p class="certificate-issuer">Academy 1 Middle School</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="certificates-grid">
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Rayan Zafar. All rights reserved.</p>
-            <div class="social-links">
-                <a href="mailto:rmzbuilt@gmail.com">📧 rmzbuilt@gmail.com</a>
-            </div>
-            <p style="margin-top:20px; font-size:0.9rem;">Jersey City, NJ • 8th Grade Student • Aspiring AI Developer</p>
-        </div>
-    </footer>
+<!-- Foundational C# with Microsoft -->
+<div class="certificate-card">
+<img src="foundationalc-with-microsoft.png" alt="Foundational C# with Microsoft Certificate">
+<p>Foundational C# with Microsoft</p>
+</div>
 
-    <script>
-        function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
-        }
-    </script>
+<!-- Make Learning Python -->
+<div class="certificate-card">
+<img src="maclearningpython.png" alt="Make Learning Python Certificate">
+<p>Make Learning Python</p>
+</div>
+
+<!-- Science Computing with Python -->
+<div class="certificate-card">
+<img src="sciencompwithpython.png" alt="Science Computing with Python Certificate">
+<p>Science Computing with Python</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<p>&copy; 2025 Rayan Zafar. All rights reserved.</p>
+<div class="social-links">
+<a href="mailto:rmzbuilt@gmail.com">📧 rmzbuilt@gmail.com</a>
+</div>
+<p style="margin-top:20px; font-size:0.9rem;">Jersey City, NJ • 8th Grade Student • Aspiring AI Developer</p>
+</div>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('active');
+}
+</script>
 </body>
 </html>
