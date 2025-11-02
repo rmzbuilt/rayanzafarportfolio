@@ -126,6 +126,7 @@
             color: #f1f5f9;
         }
 
+        /* About section with side-by-side layout */
         .about-content {
             background: rgba(30, 30, 50, 0.6);
             padding: 40px;
@@ -136,20 +137,23 @@
             margin: 0 auto;
         }
 
-        /* Flex layout for image + text with image on the left */
         .about-flex {
             display: flex;
-            align-items: flex-start;
-            gap: 40px;
+            align-items: center;
+            gap: 40px; /* space between image and text */
             flex-wrap: wrap;
         }
 
         .about-flex img {
-            width: 300px; /* bigger size */
-            height: 300px;
+            width: 320px;
+            height: 320px;
             object-fit: cover;
             border-radius: 20px; /* rounded corners */
             flex-shrink: 0;
+        }
+
+        .about-flex div {
+            flex: 1;
         }
 
         .about-flex div p {
