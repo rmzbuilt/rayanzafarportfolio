@@ -77,7 +77,7 @@
         }
 
         header {
-            padding: 100px 0 60px;
+            padding: 80px 0 40px;
             text-align: center;
         }
 
@@ -95,6 +95,19 @@
             font-size: 1.4rem;
             color: #94a3b8;
             margin-bottom: 30px;
+        }
+
+        .portfolio-photo {
+            margin: 20px auto;
+            max-width: 250px;
+            border-radius: 50%;
+            border: 4px solid rgba(59, 130, 246, 0.4);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-photo:hover {
+            transform: scale(1.05);
         }
 
         .contact-btn {
@@ -140,6 +153,31 @@
             font-size: 1.1rem;
             color: #cbd5e1;
             margin-bottom: 20px;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.8);
+        }
+
+        .lightbox:target {
+            display: flex;
         }
 
         footer {
@@ -202,6 +240,10 @@
             h2 {
                 font-size: 2rem;
             }
+
+            .portfolio-photo {
+                max-width: 180px;
+            }
         }
 
         .fade-in {
@@ -238,6 +280,8 @@
     <header class="fade-in">
         <div class="container">
             <h1>Rayan Zafar</h1>
+            <!-- Clickable Portfolio Photo -->
+            <a href="#mainphoto"><img src="mainportfoliophoto.jpg" alt="Rayan Zafar" class="portfolio-photo"></a>
             <p class="subtitle">Jersey City, NJ • Aspiring AI Architect • Game Developer</p>
             <p class="subtitle" style="font-size: 1.1rem; margin-top: -15px;">8th Grade Student at Explore Middle School</p>
             <a href="mailto:rmzbuilt@gmail.com" class="contact-btn">Get In Touch</a>
@@ -256,6 +300,9 @@
             </div>
         </div>
     </section>
+
+    <!-- Lightbox Modal for Portfolio Photo -->
+    <div class="lightbox" id="mainphoto"><a href="#"><img src="mainportfoliophoto.jpg" alt="Rayan Zafar"></a></div>
 
     <footer>
         <div class="container">
