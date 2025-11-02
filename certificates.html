@@ -124,19 +124,20 @@ footer p {color:#b0b8c0;}
 </style>
 </head>
 <body>
+
 <nav>
-<div class="container">
-<div class="logo">RZ</div>
-<button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
-<ul class="nav-links" id="navLinks">
-<li><a href="index.html">Home</a></li>
-<li><a href="skills.html">Skills</a></li>
-<li><a href="projects.html">Projects</a></li>
-<li><a href="accomplishments.html">Accomplishments</a></li>
-<li><a href="certificates.html" class="active">Certificates</a></li>
-<li><a href="interests.html">Interests</a></li>
-</ul>
-</div>
+  <div class="container">
+    <div class="logo">RZ</div>
+    <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certificates.html">Certificates</a></li>
+      <li><a href="accomplishments.html">Accomplishments</a></li>
+      <li><a href="interests.html">Interests</a></li>
+    </ul>
+  </div>
 </nav>
 
 <section>
@@ -146,21 +147,18 @@ footer p {color:#b0b8c0;}
 
 <div class="certificates-grid">
 
-  <!-- Foundational C# with Microsoft -->
   <div class="certificate-card">
     <img src="foundationalc.png" alt="Foundational C# with Microsoft">
     <h3>Foundational C# with Microsoft</h3>
     <p>Microsoft Learn</p>
   </div>
 
-  <!-- Machine Learning with Python -->
   <div class="certificate-card">
     <img src="maclearningpython.png" alt="Machine Learning with Python">
     <h3>Machine Learning with Python</h3>
     <p>freeCodeCamp</p>
   </div>
 
-  <!-- Scientific Computing with Python -->
   <div class="certificate-card">
     <img src="sciencompwithpython.png" alt="Scientific Computing with Python">
     <h3>Scientific Computing with Python</h3>
@@ -190,6 +188,14 @@ footer p {color:#b0b8c0;}
 function toggleMenu() {
     document.getElementById('navLinks').classList.toggle('active');
 }
+
+// Automatically highlight active nav link
+const currentPage = location.pathname.split("/").pop();
+document.querySelectorAll('.nav-links a').forEach(link => {
+    if(link.getAttribute('href') === currentPage){
+        link.classList.add('active');
+    }
+});
 
 // Lightbox functionality
 const lightbox = document.getElementById('lightbox');
