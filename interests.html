@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rayan Zafar - Interests</title>
 <style>
-/* Copy all the same CSS from projects.html for body, nav, cards, footer, etc. */
 * {margin:0; padding:0; box-sizing:border-box;}
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -33,26 +32,63 @@ nav .container {display:flex; justify-content:space-between; align-items:center;
 section {padding:80px 0;}
 h1 {font-size:3rem; text-align:center; margin-bottom:20px; background: linear-gradient(135deg,#3b82f6 0%,#60a5fa 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
 .page-intro {text-align:center; color:#b0b8c0; font-size:1.2rem; margin-bottom:60px; max-width:700px; margin-left:auto; margin-right:auto;}
-.projects-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px;}
+
+/* Fun grid for interests */
+.projects-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+}
+
 .project-card {
-    background: rgba(40,40,60,0.6);
-    padding:25px;
-    border-radius:15px;
+    background: rgba(40,40,60,0.75);
+    padding:30px 20px;
+    border-radius:20px;
     border:1px solid rgba(96,165,250,0.2);
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(12px);
     text-align:center;
 }
-.project-card:hover {transform: translateY(-8px); border-color:#60a5fa; box-shadow:0 15px 40px rgba(96,165,250,0.3);}
-.project-card img.main-image {width:100%; height:140px; object-fit:cover; border-radius:8px; margin-bottom:12px;}
-.project-card h3 {font-size:1.6rem; margin-bottom:10px; display:flex; justify-content:center; align-items:center; gap:8px;}
-.project-card p {color:#e0e0e0; font-size:0.95rem;}
-.icon {width:24px; height:24px;}
+.project-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 50px rgba(96,165,250,0.4);
+}
+
+.project-card img.main-image {
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:15px;
+    border:1px solid rgba(96,165,250,0.3);
+    transition: transform 0.3s ease;
+}
+.project-card img.main-image:hover {
+    transform: scale(1.05);
+}
+
+.project-card h3 {
+    font-size:1.8rem;
+    margin-bottom:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    color:#60a5fa;
+}
+.project-card p {
+    color:#e0e0e0;
+    font-size:1rem;
+    line-height:1.5;
+}
+
+/* Footer */
 footer {background: rgba(30,30,50,0.9); padding:40px 0; text-align:center; border-top:2px solid #60a5fa; margin-top:80px;}
 footer p {color:#b0b8c0;}
 .social-links {margin-top:20px;}
 .social-links a {color:#60a5fa; text-decoration:none; margin:0 15px; font-size:1.1rem; transition:0.3s;}
 .social-links a:hover {color:#3b82f6;}
+
 @media(max-width:768px) {
     .mobile-menu-btn{display:block;}
     .nav-links{display:none; position:absolute; top:70px; left:0; right:0; background: rgba(30,30,50,0.98); flex-direction:column; padding:20px; gap:10px;}
@@ -84,24 +120,25 @@ footer p {color:#b0b8c0;}
 <p class="page-intro">Some of my hobbies and passions that inspire me every day.</p>
 
 <div class="projects-grid">
+
 <!-- Baking -->
 <div class="project-card">
 <img class="main-image" src="baking.png" alt="Baking">
-<h3><img class="icon" src="icon-baking.png" alt="Baking icon"> Baking</h3>
+<h3>🥐 Baking</h3>
 <p>I enjoy experimenting with different recipes and baking treats for friends and family.</p>
 </div>
 
 <!-- Chess -->
 <div class="project-card">
 <img class="main-image" src="playchess.jpg" alt="Playing Chess">
-<h3><img class="icon" src="icon-chess.png" alt="Chess icon"> Chess</h3>
+<h3>♟️ Chess</h3>
 <p>Chess is one of my favorite ways to challenge my mind and strategize in fun ways.</p>
 </div>
 
 <!-- Music -->
 <div class="project-card">
 <img class="main-image" src="listeningtomusic.jpg" alt="Listening to Music">
-<h3><img class="icon" src="icon-music.png" alt="Music icon"> Music</h3>
+<h3>🎧 Music</h3>
 <p>I love exploring new genres and listening to music that inspires creativity.</p>
 </div>
 
@@ -120,7 +157,9 @@ footer p {color:#b0b8c0;}
 </footer>
 
 <script>
-function toggleMenu() {document.getElementById('navLinks').classList.toggle('active');}
+function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('active');
+}
 </script>
 </body>
 </html>
