@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rayan Zafar - Accomplishments</title>
     <style>
+        /* ===== Global Styles ===== */
         * {
             margin: 0;
             padding: 0;
@@ -154,6 +155,50 @@
             font-weight: 600;
         }
 
+        /* ===== Image Gallery ===== */
+        .gallery {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .gallery img {
+            width: 120px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
         footer {
             background: rgba(15, 15, 30, 0.9);
             padding: 40px 0;
@@ -210,6 +255,10 @@
             .accomplishments-grid {
                 grid-template-columns: 1fr;
             }
+
+            .gallery img {
+                width: 90px;
+            }
         }
 
         .fade-in {
@@ -229,6 +278,7 @@
     </style>
 </head>
 <body>
+    <!-- ===== Navigation ===== -->
     <nav>
         <div class="container">
             <div class="logo">RZ</div>
@@ -243,12 +293,15 @@
         </div>
     </nav>
 
+    <!-- ===== Accomplishments Section ===== -->
     <section>
         <div class="container">
             <h1 class="fade-in">Accomplishments</h1>
             <p class="page-intro fade-in">Recognition and achievements beyond coding and technology.</p>
             
             <div class="accomplishments-grid">
+
+                <!-- Spelling Bee -->
                 <div class="accomplishment-card">
                     <div class="accomplishment-icon">🏆</div>
                     <h3>Scripps Spelling Bee Champion</h3>
@@ -259,17 +312,33 @@
                         <li>Placed 3rd in the entire county</li>
                         <li>Placed 4th in the entire county</li>
                     </ul>
-                    <div style="text-align: center;">
+
+                    <!-- Spelling Bee Images -->
+                    <div class="gallery">
+                        <a href="#img1"><img src="images/accomplishments/spelling bee1.jpeg" alt="Spelling Bee 1"></a>
+                        <a href="#img2"><img src="images/accomplishments/spelling bee2.jpeg" alt="Spelling Bee 2"></a>
+                        <a href="#img3"><img src="images/accomplishments/spelling bee3.jpeg" alt="Spelling Bee 3"></a>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 10px;">
                         <span class="achievement-badge">School Champion × 3</span>
                     </div>
                 </div>
-                
+
+                <!-- Women's Suffrage History -->
                 <div class="accomplishment-card">
                     <div class="accomplishment-icon">🏛️</div>
                     <h3>Women's Suffrage History Project</h3>
                     <p>Won the Women's Suffrage History Month competition, showcasing exceptional research skills, historical understanding, and presentation abilities.</p>
                     <p style="margin-top: 15px;"><strong>Recognition:</strong> Presented my project at the Museum of Jersey City History (Van Wagenen House), sharing my research with the community and demonstrating public speaking skills.</p>
-                    <div style="text-align: center;">
+
+                    <!-- WSH Images -->
+                    <div class="gallery">
+                        <a href="#img4"><img src="images/accomplishments/wsh1.jpeg" alt="WSH 1"></a>
+                        <a href="#img5"><img src="images/accomplishments/wsh2.jpeg" alt="WSH 2"></a>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 10px;">
                         <span class="achievement-badge">Competition Winner</span>
                     </div>
                 </div>
@@ -277,6 +346,14 @@
         </div>
     </section>
 
+    <!-- ===== Lightbox Elements ===== -->
+    <div id="img1" class="lightbox"><a href="#_"><img src="images/accomplishments/spelling bee1.jpeg" alt="Spelling Bee 1"></a></div>
+    <div id="img2" class="lightbox"><a href="#_"><img src="images/accomplishments/spelling bee2.jpeg" alt="Spelling Bee 2"></a></div>
+    <div id="img3" class="lightbox"><a href="#_"><img src="images/accomplishments/spelling bee3.jpeg" alt="Spelling Bee 3"></a></div>
+    <div id="img4" class="lightbox"><a href="#_"><img src="images/accomplishments/wsh1.jpeg" alt="WSH 1"></a></div>
+    <div id="img5" class="lightbox"><a href="#_"><img src="images/accomplishments/wsh2.jpeg" alt="WSH 2"></a></div>
+
+    <!-- ===== Footer ===== -->
     <footer>
         <div class="container">
             <p>&copy; 2025 Rayan Zafar. All rights reserved.</p>
@@ -292,6 +369,7 @@
             document.getElementById('navLinks').classList.toggle('active');
         }
 
+        // Fade-in animation
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
