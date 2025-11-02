@@ -56,8 +56,9 @@ h1 {font-size:3rem; text-align:center; margin-bottom:20px; background: linear-gr
 
 .project-card img.main-image {
     width:100%;
-    height:160px;
-    object-fit:cover;
+    height:220px; /* increased from 160px */
+    object-fit: contain; /* ensures the entire image fits */
+    object-position: top; /* aligns image to top */
     border-radius:12px;
     margin-bottom:15px;
     border:1px solid rgba(96,165,250,0.3);
