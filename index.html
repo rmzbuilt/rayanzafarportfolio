@@ -132,23 +132,24 @@
             border-radius: 15px;
             border: 1px solid rgba(59, 130, 246, 0.2);
             backdrop-filter: blur(10px);
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
-        /* Flex layout for image + text */
+        /* Flex layout for image + text with image on the left */
         .about-flex {
             display: flex;
             align-items: flex-start;
-            gap: 30px;
+            gap: 40px;
             flex-wrap: wrap;
         }
 
         .about-flex img {
-            width: 250px;
-            height: 250px;
+            width: 300px; /* bigger size */
+            height: 300px;
             object-fit: cover;
-            border-radius: 15px;
+            border-radius: 20px; /* rounded corners */
+            flex-shrink: 0;
         }
 
         .about-flex div p {
@@ -224,8 +225,8 @@
             }
 
             .about-flex img {
-                width: 200px;
-                height: 200px;
+                width: 250px;
+                height: 250px;
             }
         }
 
