@@ -77,7 +77,7 @@
         }
 
         header {
-            padding: 60px 0;
+            padding: 60px 20px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -86,20 +86,23 @@
         }
 
         header img {
-            width: 220px;
-            height: 220px;
+            width: 250px;
+            height: 250px;
             object-fit: cover;
             border-radius: 20px;
+            border: 2px solid #3b82f6;
         }
 
         .header-text {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
             max-width: 600px;
         }
 
-        h1 {
+        .header-text .text-content h1 {
             font-size: 3.5rem;
             font-weight: 700;
-            margin-bottom: 10px;
             background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -109,7 +112,6 @@
         .subtitle {
             font-size: 1.4rem;
             color: #94a3b8;
-            margin-bottom: 15px;
         }
 
         .contact-btn {
@@ -121,7 +123,7 @@
             border-radius: 8px;
             font-weight: 600;
             transition: all 0.3s ease;
-            margin-top: 10px;
+            width: fit-content;
         }
 
         .contact-btn:hover {
@@ -185,23 +187,38 @@
             color: #3b82f6;
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: rgba(15, 15, 30, 0.98);
+                flex-direction: column;
+                padding: 20px;
+                gap: 10px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
             header {
                 flex-direction: column;
                 text-align: center;
+                gap: 30px;
             }
 
             header img {
-                width: 180px;
-                height: 180px;
                 margin-bottom: 20px;
             }
 
-            .header-text {
-                max-width: 100%;
-            }
-
-            h1 {
+            .header-text .text-content h1 {
                 font-size: 2.5rem;
             }
 
@@ -248,10 +265,12 @@
     <header class="fade-in">
         <img src="mainportfoliophoto.jpg" alt="Rayan Zafar">
         <div class="header-text">
-            <h1>Rayan Zafar</h1>
-            <p class="subtitle">Jersey City, NJ • Aspiring AI Architect • Game Developer</p>
-            <p class="subtitle" style="font-size: 1.1rem; margin-top: -5px;">8th Grade Student at Explore Middle School</p>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rmzbuilt@gmail.com" target="_blank" class="contact-btn">Get In Touch</a>
+            <div class="text-content">
+                <h1>Rayan Zafar</h1>
+                <p class="subtitle">Jersey City, NJ • Aspiring AI Architect • Game Developer</p>
+                <p class="subtitle" style="font-size: 1.1rem; margin-top: -5px;">8th Grade Student at Explore Middle School</p>
+            </div>
+            <a href="mailto:rmzbuilt@gmail.com" class="contact-btn">Get In Touch</a>
         </div>
     </header>
 
