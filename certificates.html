@@ -88,7 +88,6 @@
             background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .page-intro {
@@ -109,11 +108,12 @@
 
         .certificate-card {
             background: rgba(30, 30, 50, 0.6);
-            padding: 35px;
+            padding: 25px;
             border-radius: 15px;
             border: 1px solid rgba(59, 130, 246, 0.2);
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
+            text-align: center;
         }
 
         .certificate-card:hover {
@@ -122,52 +122,25 @@
             box-shadow: 0 15px 40px rgba(59, 130, 246, 0.3);
         }
 
-        .certificate-icon {
-            font-size: 3rem;
+        .certificate-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
             margin-bottom: 15px;
-            text-align: center;
+            border: 1px solid rgba(59, 130, 246, 0.2);
         }
 
         .certificate-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: #60a5fa;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .certificate-issuer {
             color: #94a3b8;
             font-size: 0.95rem;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             font-style: italic;
-        }
-
-        .certificate-card p {
-            color: #cbd5e1;
-            line-height: 1.7;
-            margin-bottom: 15px;
-        }
-
-        .certificate-tag {
-            display: inline-block;
-            padding: 5px 12px;
-            background: rgba(59, 130, 246, 0.2);
-            color: #60a5fa;
-            border-radius: 15px;
-            font-size: 0.85rem;
-            margin-right: 8px;
-            margin-top: 10px;
-        }
-
-        .category-section {
-            margin-bottom: 60px;
-        }
-
-        .category-title {
-            font-size: 1.8rem;
-            color: #f1f5f9;
-            margin-bottom: 30px;
-            padding-left: 15px;
-            border-left: 4px solid #3b82f6;
         }
 
         footer {
@@ -227,21 +200,6 @@
                 grid-template-columns: 1fr;
             }
         }
-
-        .fade-in {
-            animation: fadeIn 0.8s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
     </style>
 </head>
 <body>
@@ -262,97 +220,44 @@
 
     <section>
         <div class="container">
-            <h1 class="fade-in">Certificates & Courses</h1>
-            <p class="page-intro fade-in">Professional development and continuous learning through online courses and certifications.</p>
-            
-            <!-- Programming & Development -->
-            <div class="category-section">
-                <h2 class="category-title">Programming & Development</h2>
-                <div class="certificates-grid">
-                    <div class="certificate-card">
-                        <div class="certificate-icon">🐍</div>
-                        <h3>Machine Learning with Python</h3>
-                        <p class="certificate-issuer">Certification Program</p>
-                        <p>Comprehensive course covering machine learning fundamentals, algorithms, and practical implementation using Python libraries.</p>
-                        <div>
-                            <span class="certificate-tag">Python</span>
-                            <span class="certificate-tag">ML</span>
-                            <span class="certificate-tag">AI</span>
-                        </div>
-                    </div>
+            <h1>Certificates & Courses</h1>
+            <p class="page-intro">Below are my earned certifications and course completions.</p>
 
-                    <div class="certificate-card">
-                        <div class="certificate-icon">🔬</div>
-                        <h3>Scientific Computing with Python</h3>
-                        <p class="certificate-issuer">Certification Program</p>
-                        <p>Advanced Python programming focused on scientific computing, data analysis, and computational problem-solving.</p>
-                        <div>
-                            <span class="certificate-tag">Python</span>
-                            <span class="certificate-tag">Data Science</span>
-                        </div>
-                    </div>
-
-                    <div class="certificate-card">
-                        <div class="certificate-icon">🎮</div>
-                        <h3>Foundational C# with Microsoft</h3>
-                        <p class="certificate-issuer">Microsoft Learn</p>
-                        <p>Core C# programming concepts and .NET framework fundamentals for building applications and games.</p>
-                        <div>
-                            <span class="certificate-tag">C#</span>
-                            <span class="certificate-tag">.NET</span>
-                            <span class="certificate-tag">Microsoft</span>
-                        </div>
-                    </div>
+            <div class="certificates-grid">
+                <div class="certificate-card">
+                    <img src="sciencompwithpython.png" alt="Scientific Computing with Python">
+                    <h3>Scientific Computing with Python</h3>
+                    <p class="certificate-issuer">freeCodeCamp</p>
                 </div>
-            </div>
 
-            <!-- Advanced Programming -->
-            <div class="category-section">
-                <h2 class="category-title">Advanced Programming</h2>
-                <div class="certificates-grid">
-                    <div class="certificate-card">
-                        <div class="certificate-icon">🐍</div>
-                        <h3>Intermediate-Advanced Python</h3>
-                        <p class="certificate-issuer">Advanced Certification</p>
-                        <p>Deep dive into advanced Python concepts including object-oriented programming, decorators, generators, and design patterns.</p>
-                        <div>
-                            <span class="certificate-tag">Python</span>
-                            <span class="certificate-tag">Advanced</span>
-                        </div>
-                    </div>
+                <div class="certificate-card">
+                    <img src="maclearningpython.png" alt="Machine Learning with Python">
+                    <h3>Machine Learning with Python</h3>
+                    <p class="certificate-issuer">freeCodeCamp</p>
+                </div>
 
-                    <div class="certificate-card">
-                        <div class="certificate-icon">🎯</div>
-                        <h3>Intermediate-Advanced C#</h3>
-                        <p class="certificate-issuer">Advanced Certification</p>
-                        <p>Advanced C# programming techniques, LINQ, async programming, and enterprise application development.</p>
-                        <div>
-                            <span class="certificate-tag">C#</span>
-                            <span class="certificate-tag">Advanced</span>
-                        </div>
-                    </div>
+                <div class="certificate-card">
+                    <img src="foundationalc#withmicrosoft.png" alt="Foundational C# with Microsoft">
+                    <h3>Foundational C# with Microsoft</h3>
+                    <p class="certificate-issuer">Microsoft Learn</p>
+                </div>
 
-                    <div class="certificate-card">
-                        <div class="certificate-icon">⚙️</div>
-                        <h3>Intermediate-Advanced C++</h3>
-                        <p class="certificate-issuer">Advanced Certification</p>
-                        <p>Advanced C++ concepts including memory management, templates, STL, and performance optimization.</p>
-                        <div>
-                            <span class="certificate-tag">C++</span>
-                            <span class="certificate-tag">Advanced</span>
-                        </div>
-                    </div>
+                <div class="certificate-card">
+                    <img src="spelling bee1.jpg" alt="Spelling Bee Achievement">
+                    <h3>School Spelling Bee Certificate</h3>
+                    <p class="certificate-issuer">Academy 1 Middle School</p>
+                </div>
 
-                    <div class="certificate-card">
-                        <div class="certificate-icon">💻</div>
-                        <h3>Intermediate-Advanced Computer Programming</h3>
-                        <p class="certificate-issuer">Advanced Certification</p>
-                        <p>Comprehensive programming course covering algorithms, data structures, and software engineering principles.</p>
-                        <div>
-                            <span class="certificate-tag">Algorithms</span>
-                            <span class="certificate-tag">Data Structures</span>
-                        </div>
-                    </div>
+                <div class="certificate-card">
+                    <img src="spelling bee2.jpg" alt="Spelling Bee Runner-Up">
+                    <h3>Spelling Bee Finalist</h3>
+                    <p class="certificate-issuer">Academy 1 Middle School</p>
+                </div>
+
+                <div class="certificate-card">
+                    <img src="spelling bee3.png" alt="Spelling Bee Participation">
+                    <h3>Spelling Bee Participation</h3>
+                    <p class="certificate-issuer">Academy 1 Middle School</p>
                 </div>
             </div>
         </div>
@@ -372,22 +277,6 @@
         function toggleMenu() {
             document.getElementById('navLinks').classList.toggle('active');
         }
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.certificate-card').forEach((el, index) => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-            observer.observe(el);
-        });
     </script>
 </body>
 </html>
