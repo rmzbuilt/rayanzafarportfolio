@@ -77,8 +77,23 @@
         }
 
         header {
-            padding: 100px 0 60px;
-            text-align: center;
+            padding: 60px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        header img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .header-text {
+            max-width: 600px;
         }
 
         h1 {
@@ -94,7 +109,7 @@
         .subtitle {
             font-size: 1.4rem;
             color: #94a3b8;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
         }
 
         .contact-btn {
@@ -126,37 +141,17 @@
             color: #f1f5f9;
         }
 
-        /* About section with side-by-side layout */
         .about-content {
             background: rgba(30, 30, 50, 0.6);
             padding: 40px;
             border-radius: 15px;
             border: 1px solid rgba(59, 130, 246, 0.2);
             backdrop-filter: blur(10px);
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        .about-flex {
-            display: flex;
-            align-items: center;
-            gap: 40px; /* space between image and text */
-            flex-wrap: wrap;
-        }
-
-        .about-flex img {
-            width: 320px;
-            height: 320px;
-            object-fit: cover;
-            border-radius: 20px; /* rounded corners */
-            flex-shrink: 0;
-        }
-
-        .about-flex div {
-            flex: 1;
-        }
-
-        .about-flex div p {
+        .about-content p {
             font-size: 1.1rem;
             color: #cbd5e1;
             margin-bottom: 20px;
@@ -190,25 +185,20 @@
             color: #3b82f6;
         }
 
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background: rgba(15, 15, 30, 0.98);
+        @media (max-width: 900px) {
+            header {
                 flex-direction: column;
-                padding: 20px;
-                gap: 10px;
+                text-align: center;
             }
 
-            .nav-links.active {
-                display: flex;
+            header img {
+                width: 180px;
+                height: 180px;
+                margin-bottom: 20px;
+            }
+
+            .header-text {
+                max-width: 100%;
             }
 
             h1 {
@@ -221,16 +211,6 @@
 
             h2 {
                 font-size: 2rem;
-            }
-
-            .about-flex {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .about-flex img {
-                width: 250px;
-                height: 250px;
             }
         }
 
@@ -261,32 +241,29 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="accomplishments.html">Accomplishments</a></li>
                 <li><a href="interests.html">Interests</a></li>
-                <li><a href="certificates.html">Certificates</a></li>
             </ul>
         </div>
     </nav>
 
     <header class="fade-in">
-        <div class="container">
+        <img src="mainportfoliophoto.jpg" alt="Rayan Zafar">
+        <div class="header-text">
             <h1>Rayan Zafar</h1>
             <p class="subtitle">Jersey City, NJ • Aspiring AI Architect • Game Developer</p>
-            <p class="subtitle" style="font-size: 1.1rem; margin-top: -15px;">8th Grade Student at Explore Middle School</p>
-            <a href="mailto:rmzbuilt@gmail.com" class="contact-btn">Get In Touch</a>
+            <p class="subtitle" style="font-size: 1.1rem; margin-top: -5px;">8th Grade Student at Explore Middle School</p>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rmzbuilt@gmail.com" target="_blank" class="contact-btn">Get In Touch</a>
         </div>
     </header>
 
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
-            <div class="about-content fade-in about-flex">
-                <img src="mainportfoliophoto.jpg" alt="Rayan Zafar">
-                <div>
-                    <p>Hi, I'm Rayan Zafar. I was born in Islamabad, Pakistan, and moved to the U.S. before the age of two. I've been living in Jersey City, NJ ever since with my younger sister and brother. Currently, I'm an 8th-grade student at Explore Middle School with a passion for Artificial Intelligence and Software Development.</p>
-                    
-                    <p>I've always been fascinated by the potential of artificial intelligence to transform how we live our daily lives. Whether it's building a conversational AI bot or designing a more complex intelligent system, I want to test the limits of what can be done with AI and see just how many people I can help.</p>
-                    
-                    <p>My journey into coding started when I watched my dad, a software engineer, working late one night. I sat down next to him and he taught me what some of the functions meant. Ever since then, I've been fascinated by how lines of code could create something entirely new. That curiosity led me to learn Python, JavaScript, HTML, and more, and I haven't stopped building since.</p>
-                </div>
+            <div class="about-content fade-in">
+                <p>Hi, I'm Rayan Zafar. I was born in Islamabad, Pakistan, and moved to the U.S. before the age of two. I've been living in Jersey City, NJ ever since with my younger sister and brother. Currently, I'm an 8th-grade student at Explore Middle School with a passion for Artificial Intelligence and Software Development.</p>
+                
+                <p>I've always been fascinated by the potential of artificial intelligence to transform how we live our daily lives. Whether it's building a conversational AI bot or designing a more complex intelligent system, I want to test the limits of what can be done with AI and see just how many people I can help.</p>
+                
+                <p>My journey into coding started when I watched my dad, a software engineer, working late one night. I sat down next to him and he taught me what some of the functions meant. Ever since then, I've been fascinated by how lines of code could create something entirely new. That curiosity led me to learn Python, JavaScript, HTML, and more, and I haven't stopped building since.</p>
             </div>
         </div>
     </section>
