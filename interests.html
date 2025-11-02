@@ -48,6 +48,7 @@ h1 {font-size:3rem; text-align:center; margin-bottom:20px; background: linear-gr
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     backdrop-filter: blur(12px);
     text-align:center;
+    cursor: pointer; /* indicate clickable images */
 }
 .project-card:hover {
     transform: translateY(-10px) scale(1.03);
@@ -56,9 +57,9 @@ h1 {font-size:3rem; text-align:center; margin-bottom:20px; background: linear-gr
 
 .project-card img.main-image {
     width:100%;
-    height:220px; /* increased from 160px */
-    object-fit: contain; /* ensures the entire image fits */
-    object-position: top; /* aligns image to top */
+    height:220px; /* increased for full visibility */
+    object-fit: contain;
+    object-position: top;
     border-radius:12px;
     margin-bottom:15px;
     border:1px solid rgba(96,165,250,0.3);
@@ -81,6 +82,40 @@ h1 {font-size:3rem; text-align:center; margin-bottom:20px; background: linear-gr
     color:#e0e0e0;
     font-size:1rem;
     line-height:1.5;
+}
+
+/* Lightbox overlay */
+#lightbox {
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index:2000;
+    cursor: pointer;
+    animation: fadeIn 0.3s ease;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 35px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+@keyframes zoomIn {
+    from {transform: scale(0.8); opacity:0;}
+    to {transform: scale(1); opacity:1;}
 }
 
 /* Footer */
@@ -147,6 +182,11 @@ footer p {color:#b0b8c0;}
 </div>
 </section>
 
+<!-- Lightbox Overlay -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Interest Image">
+</div>
+
 <footer>
 <div class="container">
 <p>&copy; 2025 Rayan Zafar. All rights reserved.</p>
@@ -160,6 +200,22 @@ footer p {color:#b0b8c0;}
 <script>
 function toggleMenu() {
     document.getElementById('navLinks').classList.toggle('active');
+}
+
+// Lightbox functionality
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+document.querySelectorAll('.project-card img.main-image').forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+    });
+});
+
+function closeLightbox() {
+    lightbox.style.display = 'none';
 }
 </script>
 </body>
