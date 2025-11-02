@@ -116,6 +116,7 @@
             border: 1px solid rgba(59, 130, 246, 0.2);
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
+            text-align: center;
         }
 
         .accomplishment-card:hover {
@@ -127,14 +128,12 @@
         .accomplishment-icon {
             font-size: 4rem;
             margin-bottom: 20px;
-            text-align: center;
         }
 
         .accomplishment-card h3 {
             font-size: 1.6rem;
             color: #60a5fa;
             margin-bottom: 20px;
-            text-align: center;
         }
 
         .accomplishment-card p {
@@ -154,51 +153,38 @@
             font-weight: 600;
         }
 
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-            margin-top: 25px;
-        }
-
-        .gallery a {
-            cursor: pointer;
-        }
-
-        .gallery a img {
+        .accomplishment-image {
             width: 100%;
-            max-width: 300px; /* bigger than before */
-            height: auto;
+            max-height: 200px;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 15px;
+            margin-top: 15px;
+            cursor: pointer;
             transition: transform 0.3s ease;
-            border: 2px solid rgba(59, 130, 246, 0.3);
         }
 
-        .gallery a:hover img {
+        .accomplishment-image:hover {
             transform: scale(1.05);
         }
 
         /* Lightbox */
         .lightbox {
+            display: none;
             position: fixed;
-            top: 0;
+            z-index: 10000;
             left: 0;
+            top: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.85);
-            display: none;
-            align-items: center;
+            background: rgba(0,0,0,0.9);
             justify-content: center;
-            z-index: 2000;
+            align-items: center;
         }
 
         .lightbox img {
             max-width: 90%;
             max-height: 90%;
             border-radius: 10px;
-            box-shadow: 0 0 30px rgba(0,0,0,0.8);
         }
 
         .lightbox:target {
@@ -300,6 +286,8 @@
             <p class="page-intro fade-in">Recognition and achievements beyond coding and technology.</p>
             
             <div class="accomplishments-grid">
+
+                <!-- Scripps Spelling Bee -->
                 <div class="accomplishment-card">
                     <div class="accomplishment-icon">🏆</div>
                     <h3>Scripps Spelling Bee Champion</h3>
@@ -310,64 +298,30 @@
                         <li>Placed 3rd in the entire county</li>
                         <li>Placed 4th in the entire county</li>
                     </ul>
-                    <div class="gallery">
-                        <a href="#img1"><img src="spelling bee1.jpg" alt="Spelling Bee 1"></a>
-                        <a href="#img2"><img src="spelling bee2.jpg" alt="Spelling Bee 2"></a>
-                        <a href="#img3"><img src="spelling bee3.png" alt="Spelling Bee 3"></a>
+                    <div style="text-align: center;">
+                        <span class="achievement-badge">School Champion × 3</span>
                     </div>
+                    <a href="#img1"><img src="spelling bee1.jpg" alt="Spelling Bee" class="accomplishment-image"></a>
                 </div>
-                
+
+                <!-- Women's Suffrage History -->
                 <div class="accomplishment-card">
                     <div class="accomplishment-icon">🏛️</div>
                     <h3>Women's Suffrage History Project</h3>
                     <p>Won the Women's Suffrage History Month competition, showcasing exceptional research skills, historical understanding, and presentation abilities.</p>
                     <p style="margin-top: 15px;"><strong>Recognition:</strong> Presented my project at the Museum of Jersey City History (Van Wagenen House), sharing my research with the community and demonstrating public speaking skills.</p>
-                    <div class="gallery">
-                        <a href="#img4"><img src="wsh1.jpg" alt="Womens Suffrage 1"></a>
-                        <a href="#img5"><img src="wsh2.jpg" alt="Womens Suffrage 2"></a>
+                    <div style="text-align: center;">
+                        <span class="achievement-badge">Competition Winner</span>
                     </div>
+                    <a href="#img2"><img src="wsh1.jpg" alt="Womens Suffrage History" class="accomplishment-image"></a>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Lightbox Modals -->
-    <div class="lightbox" id="img1"><a href="#"><img src="spelling bee1.jpg" alt="Spelling Bee 1"></a></div>
-    <div class="lightbox" id="img2"><a href="#"><img src="spelling bee2.jpg" alt="Spelling Bee 2"></a></div>
-    <div class="lightbox" id="img3"><a href="#"><img src="spelling bee3.png" alt="Spelling Bee 3"></a></div>
-    <div class="lightbox" id="img4"><a href="#"><img src="wsh1.jpg" alt="Womens Suffrage 1"></a></div>
-    <div class="lightbox" id="img5"><a href="#"><img src="wsh2.jpg" alt="Womens Suffrage 2"></a></div>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Rayan Zafar. All rights reserved.</p>
-            <div class="social-links">
-                <a href="mailto:rmzbuilt@gmail.com">📧 rmzbuilt@gmail.com</a>
-            </div>
-            <p style="margin-top: 20px; font-size: 0.9rem;">Jersey City, NJ • 8th Grade Student • Aspiring AI Developer</p>
-        </div>
-    </footer>
-
-    <script>
-        function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
-        }
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.accomplishment-card').forEach((el, index) => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = `opacity 0.6s ease ${index * 0.2}s, transform 0.6s ease ${index * 0.2}s`;
-            observer.observe(el);
-        });
-    </script>
-</body>
-</html>
+                <!-- NJSLA Good Score -->
+                <div class="accomplishment-card">
+                    <div class="accomplishment-icon">📜</div>
+                    <h3>High NJSLA Score</h3>
+                    <p>Scored over 800 on the NJSLA exam, demonstrating strong academic performance in standardized testing. Proud moment captured with my dad and principal while holding my certificate!</p>
+                    <div style="text-align: center;">
+                        <span class="achievement-badge">Score: 800+</span>
+                    </div>
+                    <a href="#img3"><img src="NJSLAGOODSCORE.jpg"
