@@ -8,14 +8,13 @@
 * {margin:0; padding:0; box-sizing:border-box;}
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1a1a2f 0%, #2a2a3f 100%);
+    background-color:#0f0f23;
     color: #f0f0f0;
-    line-height:1.6;
     min-height:100vh;
 }
 nav {
     background: rgba(30,30,50,0.95);
-    padding:20px 0;
+    padding:15px 0;
     position: sticky;
     top:0;
     z-index:1000;
@@ -24,60 +23,61 @@ nav {
 }
 nav .container {display:flex; justify-content:space-between; align-items:center;}
 .logo {font-size:1.5rem; font-weight:700; color:#60a5fa;}
-.nav-links {display:flex; gap:30px; list-style:none;}
-.nav-links a {color:#d0d0d0; text-decoration:none; font-weight:500; padding:8px 16px; border-radius:6px; transition:all 0.3s ease;}
+.nav-links {display:flex; gap:25px; list-style:none;}
+.nav-links a {color:#d0d0d0; text-decoration:none; font-weight:500; padding:6px 12px; border-radius:6px; transition:all 0.3s ease;}
 .nav-links a:hover, .nav-links a.active {color:#60a5fa; background: rgba(96,165,250,0.1);}
 .mobile-menu-btn {display:none; background:none; border:none; color:#60a5fa; font-size:1.5rem; cursor:pointer;}
 .container {max-width:1200px; margin:0 auto; padding:0 20px;}
-section {padding:80px 0;}
-h1 {font-size:3rem; text-align:center; margin-bottom:20px; background: linear-gradient(135deg,#3b82f6 0%,#60a5fa 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
-.page-intro {text-align:center; color:#b0b8c0; font-size:1.2rem; margin-bottom:60px; max-width:700px; margin-left:auto; margin-right:auto;}
+section {padding:60px 0;}
+h1 {font-size:2.5rem; text-align:center; margin-bottom:15px; color:#60a5fa;}
+.page-intro {text-align:center; color:#b0b8c0; font-size:1.1rem; margin-bottom:40px; max-width:700px; margin-left:auto; margin-right:auto;}
 
-/* Certificates grid */
 .certificates-grid {
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:40px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
 }
 
 .certificate-card {
-    background: rgba(40,40,60,0.75);
-    padding:25px 20px;
-    border-radius:20px;
+    background: rgba(30,30,50,0.9);
     border:1px solid rgba(96,165,250,0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    backdrop-filter: blur(12px);
+    border-radius:15px;
     text-align:center;
+    padding:15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .certificate-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 15px 40px rgba(96,165,250,0.4);
+    transform: translateY(-5px);
+    box-shadow:0 10px 30px rgba(96,165,250,0.4);
 }
 .certificate-card img {
     width:100%;
     height:160px;
     object-fit:cover;
-    border-radius:12px;
-    margin-bottom:15px;
-    border:1px solid rgba(96,165,250,0.3);
-    transition: transform 0.3s ease;
+    border-radius:10px;
+    margin-bottom:12px;
 }
-.certificate-card img:hover {
-    transform: scale(1.05);
+.certificate-card h3 {
+    color:#60a5fa;
+    font-size:1.1rem;
+    margin-bottom:4px;
+}
+.certificate-card p {
+    color:#b0b8c0;
+    font-size:0.9rem;
+    margin-bottom:0;
 }
 
-footer {background: rgba(30,30,50,0.9); padding:40px 0; text-align:center; border-top:2px solid #60a5fa; margin-top:80px;}
+footer {background: rgba(30,30,50,0.9); padding:30px 0; text-align:center; border-top:2px solid #60a5fa; margin-top:60px;}
 footer p {color:#b0b8c0;}
-.social-links {margin-top:20px;}
-.social-links a {color:#60a5fa; text-decoration:none; margin:0 15px; font-size:1.1rem; transition:0.3s;}
+.social-links a {color:#60a5fa; text-decoration:none; margin:0 10px; font-size:1rem; transition:0.3s;}
 .social-links a:hover {color:#3b82f6;}
 
 @media(max-width:768px) {
     .mobile-menu-btn{display:block;}
-    .nav-links{display:none; position:absolute; top:70px; left:0; right:0; background: rgba(30,30,50,0.98); flex-direction:column; padding:20px; gap:10px;}
+    .nav-links{display:none; position:absolute; top:60px; left:0; right:0; background: rgba(30,30,50,0.98); flex-direction:column; padding:15px; gap:10px;}
     .nav-links.active{display:flex;}
-    h1{font-size:2.2rem;}
-    .certificates-grid{grid-template-columns:1fr;}
+    h1{font-size:2rem;}
 }
 </style>
 </head>
@@ -99,27 +99,64 @@ footer p {color:#b0b8c0;}
 
 <section>
 <div class="container">
-<h1>My Certificates</h1>
-<p class="page-intro">Here are some of the certificates I've earned while learning new skills and completing projects.</p>
+<h1>Certificates & Courses</h1>
+<p class="page-intro">Below are my earned certifications and course completions.</p>
 
 <div class="certificates-grid">
 
 <!-- Foundational C# with Microsoft -->
 <div class="certificate-card">
-<img src="foundationalc-with-microsoft.png" alt="Foundational C# with Microsoft Certificate">
-<p>Foundational C# with Microsoft</p>
+<img src="foundationalc-with-microsoft.png" alt="Foundational C# with Microsoft">
+<h3>Foundational C# with Microsoft</h3>
+<p>Microsoft Learn</p>
 </div>
 
-<!-- Make Learning Python -->
+<!-- Machine Learning with Python -->
 <div class="certificate-card">
-<img src="maclearningpython.png" alt="Make Learning Python Certificate">
-<p>Make Learning Python</p>
+<img src="maclearningpython.png" alt="Machine Learning with Python">
+<h3>Machine Learning with Python</h3>
+<p>freeCodeCamp</p>
 </div>
 
-<!-- Science Computing with Python -->
+<!-- Scientific Computing with Python -->
 <div class="certificate-card">
-<img src="sciencompwithpython.png" alt="Science Computing with Python Certificate">
-<p>Science Computing with Python</p>
+<img src="sciencompwithpython.png" alt="Scientific Computing with Python">
+<h3>Scientific Computing with Python</h3>
+<p>freeCodeCamp</p>
+</div>
+
+<!-- School Spelling Bee -->
+<div class="certificate-card">
+<img src="spelling bee1.jpg" alt="School Spelling Bee Certificate">
+<h3>School Spelling Bee Certificate</h3>
+<p>Academy 1 Middle School</p>
+</div>
+
+<!-- Spelling Bee Finalist -->
+<div class="certificate-card">
+<img src="spelling bee2.jpg" alt="Spelling Bee Finalist">
+<h3>Spelling Bee Finalist</h3>
+<p>Academy 1 Middle School</p>
+</div>
+
+<!-- Spelling Bee Participation -->
+<div class="certificate-card">
+<img src="spelling bee3.png" alt="Spelling Bee Participation">
+<h3>Spelling Bee Participation</h3>
+<p>Academy 1 Middle School</p>
+</div>
+
+<!-- WSH Certificates -->
+<div class="certificate-card">
+<img src="wsh1.jpg" alt="WSH Certificate">
+<h3>WSH Certificate 1</h3>
+<p>Academy 1 Middle School</p>
+</div>
+
+<div class="certificate-card">
+<img src="wsh2.jpg" alt="WSH Certificate 2">
+<h3>WSH Certificate 2</h3>
+<p>Academy 1 Middle School</p>
 </div>
 
 </div>
@@ -132,7 +169,7 @@ footer p {color:#b0b8c0;}
 <div class="social-links">
 <a href="mailto:rmzbuilt@gmail.com">📧 rmzbuilt@gmail.com</a>
 </div>
-<p style="margin-top:20px; font-size:0.9rem;">Jersey City, NJ • 8th Grade Student • Aspiring AI Developer</p>
+<p style="margin-top:10px; font-size:0.9rem;">Jersey City, NJ • 8th Grade Student • Aspiring AI Developer</p>
 </div>
 </footer>
 
