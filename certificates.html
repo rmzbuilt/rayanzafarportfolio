@@ -5,86 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rayan Zafar - Certificates</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin:0; padding:0; box-sizing:border-box; }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
             color: #e0e0e0;
-            line-height: 1.6;
-            min-height: 100vh;
+            line-height:1.6;
+            min-height:100vh;
         }
 
         nav {
-            background: rgba(15, 15, 30, 0.95);
+            background: rgba(15,15,30,0.95);
             padding: 20px 0;
             position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 2px solid #3b82f6;
+            top:0;
+            z-index:1000;
+            border-bottom:2px solid #3b82f6;
             backdrop-filter: blur(10px);
         }
 
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #60a5fa;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-
+        nav .container { display:flex; justify-content:space-between; align-items:center; }
+        .logo { font-size:1.5rem; font-weight:700; color:#60a5fa; }
+        .nav-links { display:flex; gap:30px; list-style:none; }
         .nav-links a {
-            color: #cbd5e1;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            padding: 8px 16px;
-            border-radius: 6px;
+            color:#cbd5e1; text-decoration:none; font-weight:500;
+            transition: color 0.3s ease; padding:8px 16px; border-radius:6px;
         }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #60a5fa;
-            background: rgba(59, 130, 246, 0.1);
-        }
+        .nav-links a:hover, .nav-links a.active { color:#60a5fa; background:rgba(59,130,246,0.1); }
 
         .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: #60a5fa;
-            font-size: 1.5rem;
-            cursor: pointer;
+            display:none; background:none; border:none;
+            color:#60a5fa; font-size:1.5rem; cursor:pointer;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        .container { max-width:1200px; margin:0 auto; padding:0 20px; }
 
-        section {
-            padding: 80px 0;
-        }
+        section { padding:80px 0; }
 
         h1 {
-            font-size: 3rem;
-            text-align: center;
-            margin-bottom: 20px;
+            font-size:3rem; text-align:center; margin-bottom:20px;
             background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -92,126 +52,63 @@
         }
 
         .page-intro {
-            text-align: center;
-            color: #94a3b8;
-            font-size: 1.2rem;
-            margin-bottom: 60px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            text-align:center; color:#94a3b8; font-size:1.2rem; margin-bottom:60px;
+            max-width:700px; margin-left:auto; margin-right:auto;
         }
 
         .certificates-grid {
-            display: grid;
+            display:grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            max-width: 1000px;
-            margin: 0 auto;
+            gap:30px;
+            max-width:1000px;
+            margin:0 auto;
         }
 
         .certificate-card {
-            background: rgba(30, 30, 50, 0.6);
-            padding: 20px;
-            border-radius: 15px;
-            border: 1px solid rgba(59, 130, 246, 0.2);
+            background: rgba(30,30,50,0.6);
+            padding:30px;
+            border-radius:15px;
+            border:1px solid rgba(59,130,246,0.2);
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
-            text-align: center;
+            text-align:center;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-8px);
+            border-color:#3b82f6;
+            box-shadow:0 15px 40px rgba(59,130,246,0.3);
         }
 
         .certificate-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
+            width:100%;
+            height:auto;
+            border-radius:12px;
+            margin-bottom:15px;
         }
 
-        .certificate-card img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Lightbox */
-        .lightbox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.85);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 2000;
-        }
-
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 10px;
-            box-shadow: 0 0 30px rgba(0,0,0,0.8);
-        }
-
-        .lightbox:target {
-            display: flex;
+        .certificate-card h3 {
+            font-size:1.4rem; color:#60a5fa; margin-bottom:10px;
         }
 
         footer {
-            background: rgba(15, 15, 30, 0.9);
-            padding: 40px 0;
-            text-align: center;
-            border-top: 2px solid #3b82f6;
-            margin-top: 80px;
+            background: rgba(15,15,30,0.9);
+            padding:40px 0; text-align:center;
+            border-top:2px solid #3b82f6; margin-top:80px;
         }
 
-        footer p {
-            color: #94a3b8;
-        }
+        footer p { color:#94a3b8; }
 
-        .social-links {
-            margin-top: 20px;
-        }
+        .social-links { margin-top:20px; }
+        .social-links a { color:#60a5fa; text-decoration:none; margin:0 15px; font-size:1.1rem; transition:color 0.3s ease; }
+        .social-links a:hover { color:#3b82f6; }
 
-        .social-links a {
-            color: #60a5fa;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #3b82f6;
-        }
-
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background: rgba(15, 15, 30, 0.98);
-                flex-direction: column;
-                padding: 20px;
-                gap: 10px;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            h1 {
-                font-size: 2.2rem;
-            }
-
-            .certificates-grid {
-                grid-template-columns: 1fr;
-            }
+        @media(max-width:768px){
+            .mobile-menu-btn { display:block; }
+            .nav-links { display:none; position:absolute; top:70px; left:0; right:0; background:rgba(15,15,30,0.98); flex-direction:column; padding:20px; gap:10px; }
+            .nav-links.active { display:flex; }
+            h1 { font-size:2.2rem; }
+            .certificates-grid { grid-template-columns:1fr; }
         }
 
         .fade-in {
@@ -219,14 +116,8 @@
         }
 
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity:0; transform:translateY(20px); }
+            to { opacity:1; transform:translateY(0); }
         }
     </style>
 </head>
@@ -240,8 +131,8 @@
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="accomplishments.html">Accomplishments</a></li>
-                <li><a href="interests.html">Interests</a></li>
                 <li><a href="certificates.html" class="active">Certificates</a></li>
+                <li><a href="interests.html">Interests</a></li>
             </ul>
         </div>
     </nav>
@@ -249,26 +140,21 @@
     <section>
         <div class="container">
             <h1 class="fade-in">Certificates</h1>
-            <p class="page-intro fade-in">Some of the certifications I've earned showcasing my dedication to learning programming and AI.</p>
+            <p class="page-intro fade-in">These are some of the certifications I have earned through my learning journey.</p>
 
-            <div class="certificates-grid fade-in">
-                <!-- Certificate 1 -->
-                <div class="certificate-card">
-                    <a href="#cert1"><img src="foundationalc#withmicrosoft.png" alt="Foundational C# with Microsoft"></a>
+            <div class="certificates-grid">
+                <div class="certificate-card fade-in">
+                    <img src="foundationalc#withmicrosoft.png" alt="Foundational C# with Microsoft">
+                    <h3>Foundational C# with Microsoft</h3>
                 </div>
-                <div class="lightbox" id="cert1"><a href="#"><img src="foundationalc#withmicrosoft.png" alt="Foundational C# with Microsoft"></a></div>
-
-                <!-- Certificate 2 -->
-                <div class="certificate-card">
-                    <a href="#cert2"><img src="maclearningpython.png" alt="MAC Learning Python"></a>
+                <div class="certificate-card fade-in">
+                    <img src="maclearningpython.png" alt="Machine Learning with Python">
+                    <h3>Machine Learning with Python</h3>
                 </div>
-                <div class="lightbox" id="cert2"><a href="#"><img src="maclearningpython.png" alt="MAC Learning Python"></a></div>
-
-                <!-- Certificate 3 -->
-                <div class="certificate-card">
-                    <a href="#cert3"><img src="sciencompwithpython.png" alt="Science of Computing with Python"></a>
+                <div class="certificate-card fade-in">
+                    <img src="sciencompwithpython.png" alt="Science of Computing with Python">
+                    <h3>Science of Computing with Python</h3>
                 </div>
-                <div class="lightbox" id="cert3"><a href="#"><img src="sciencompwithpython.png" alt="Science of Computing with Python"></a></div>
             </div>
         </div>
     </section>
@@ -284,9 +170,23 @@
     </footer>
 
     <script>
-        function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
-        }
+        function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.style.opacity='1';
+                    entry.target.style.transform='translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.certificate-card').forEach((el,index)=>{
+            el.style.opacity='0';
+            el.style.transform='translateY(20px)';
+            el.style.transition=`opacity 0.6s ease ${index*0.2}s, transform 0.6s ease ${index*0.2}s`;
+            observer.observe(el);
+        });
     </script>
 </body>
 </html>
