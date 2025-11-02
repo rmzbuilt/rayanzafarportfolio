@@ -77,15 +77,17 @@
         }
 
         header {
-            padding: 60px 20px;
+            padding: 60px 0;
+        }
+
+        .header-inner {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 50px;
+            gap: 40px;
             flex-wrap: wrap;
         }
 
-        header img {
+        .header-inner img {
             width: 250px;
             height: 250px;
             object-fit: cover;
@@ -94,15 +96,13 @@
         }
 
         .header-text {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            max-width: 600px;
+            flex: 1;
         }
 
-        .header-text .text-content h1 {
+        h1 {
             font-size: 3.5rem;
             font-weight: 700;
+            margin-bottom: 10px;
             background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -112,6 +112,7 @@
         .subtitle {
             font-size: 1.4rem;
             color: #94a3b8;
+            margin-bottom: 10px;
         }
 
         .contact-btn {
@@ -123,7 +124,7 @@
             border-radius: 8px;
             font-weight: 600;
             transition: all 0.3s ease;
-            width: fit-content;
+            margin-top: 10px;
         }
 
         .contact-btn:hover {
@@ -208,17 +209,16 @@
                 display: flex;
             }
 
-            header {
+            .header-inner {
                 flex-direction: column;
-                text-align: center;
-                gap: 30px;
+                align-items: center;
             }
 
-            header img {
+            .header-inner img {
                 margin-bottom: 20px;
             }
 
-            .header-text .text-content h1 {
+            h1 {
                 font-size: 2.5rem;
             }
 
@@ -263,14 +263,14 @@
     </nav>
 
     <header class="fade-in">
-        <img src="mainportfoliophoto.jpg" alt="Rayan Zafar">
-        <div class="header-text">
-            <div class="text-content">
+        <div class="container header-inner">
+            <img src="mainportfoliophoto.jpg" alt="Rayan Zafar">
+            <div class="header-text">
                 <h1>Rayan Zafar</h1>
                 <p class="subtitle">Jersey City, NJ • Aspiring AI Architect • Game Developer</p>
                 <p class="subtitle" style="font-size: 1.1rem; margin-top: -5px;">8th Grade Student at Explore Middle School</p>
+                <a href="mailto:rmzbuilt@gmail.com" class="contact-btn">Get In Touch</a>
             </div>
-            <a href="mailto:rmzbuilt@gmail.com" class="contact-btn">Get In Touch</a>
         </div>
     </header>
 
