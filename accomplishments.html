@@ -5,11 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rayan Zafar - Accomplishments</title>
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
@@ -17,12 +13,14 @@
         line-height: 1.6;
         min-height: 100vh;
     }
+
+    /* Navbar */
     nav {
         background: rgba(15,15,30,0.95);
         padding: 20px 0;
         position: sticky;
-        top:0;
-        z-index:1000;
+        top: 0;
+        z-index: 1000;
         border-bottom: 2px solid #3b82f6;
         backdrop-filter: blur(10px);
     }
@@ -62,14 +60,11 @@
         font-size: 1.5rem;
         cursor: pointer;
     }
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-    section {
-        padding: 80px 0;
-    }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    section { padding: 80px 0; }
+
     h1 {
         font-size: 3rem;
         text-align: center;
@@ -88,6 +83,8 @@
         margin-left: auto;
         margin-right: auto;
     }
+
+    /* Accomplishments */
     .accomplishments-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -137,6 +134,7 @@
         font-size: 0.9rem;
         font-weight: 600;
     }
+
     footer {
         background: rgba(15,15,30,0.9);
         padding: 40px 0;
@@ -144,12 +142,8 @@
         border-top: 2px solid #3b82f6;
         margin-top: 80px;
     }
-    footer p {
-        color: #94a3b8;
-    }
-    .social-links {
-        margin-top: 20px;
-    }
+    footer p { color: #94a3b8; }
+    .social-links { margin-top: 20px; }
     .social-links a {
         color: #60a5fa;
         text-decoration: none;
@@ -157,9 +151,8 @@
         font-size: 1.1rem;
         transition: color 0.3s ease;
     }
-    .social-links a:hover {
-        color: #3b82f6;
-    }
+    .social-links a:hover { color: #3b82f6; }
+
     @media (max-width:768px) {
         .mobile-menu-btn { display:block; }
         .nav-links { 
@@ -177,6 +170,7 @@
         h1 { font-size:2.2rem; }
         .accomplishments-grid { grid-template-columns: 1fr; }
     }
+
     .fade-in { animation: fadeIn 0.8s ease-in; }
     @keyframes fadeIn {
         from { opacity:0; transform:translateY(20px); }
@@ -185,92 +179,95 @@
 </style>
 </head>
 <body>
+<!-- ✅ Updated Navbar -->
 <nav>
-    <div class="container">
-        <div class="logo">RZ</div>
-        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="accomplishments.html" class="active">Accomplishments</a></li>
-            <li><a href="interests.html">Interests</a></li>
-        </ul>
-    </div>
+  <div class="container">
+    <div class="logo">RZ</div>
+    <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certificates.html">Certificates</a></li>
+      <li><a href="accomplishments.html" class="active">Accomplishments</a></li>
+      <li><a href="interests.html">Interests</a></li>
+    </ul>
+  </div>
 </nav>
 
 <section>
-    <div class="container">
-        <h1 class="fade-in">Accomplishments</h1>
-        <p class="page-intro fade-in">Recognition and achievements beyond coding and technology.</p>
-        <div class="accomplishments-grid">
-            <!-- Scripps Spelling Bee -->
-            <div class="accomplishment-card">
-                <img src="spelling bee1.jpg" alt="Spelling Bee 1">
-                <img src="spelling bee2.jpg" alt="Spelling Bee 2">
-                <img src="spelling bee3.png" alt="Spelling Bee 3">
-                <h3>Scripps Spelling Bee Champion</h3>
-                <p>Participated multiple times, demonstrating exceptional vocabulary mastery and performance under pressure.</p>
-                <ul style="color:#cbd5e1; margin-left:20px; line-height:1.8;">
-                    <li>Won at the school level 3 times</li>
-                    <li>Placed 3rd in the county</li>
-                    <li>Placed 4th in the county</li>
-                </ul>
-                <span class="achievement-badge">School Champion × 3</span>
-            </div>
+  <div class="container">
+    <h1 class="fade-in">Accomplishments</h1>
+    <p class="page-intro fade-in">Recognition and achievements beyond coding and technology.</p>
 
-            <!-- Women's Suffrage History -->
-            <div class="accomplishment-card">
-                <img src="wsh1.jpg" alt="Women's Suffrage 1">
-                <img src="wsh2.jpg" alt="Women's Suffrage 2">
-                <h3>Women's Suffrage History Project</h3>
-                <p>Won the Women's Suffrage History Month competition, showcasing research skills, historical understanding, and presentation abilities.</p>
-                <p>Presented my project at the Museum of Jersey City History (Van Wagenen House), demonstrating public speaking skills.</p>
-                <span class="achievement-badge">Competition Winner</span>
-            </div>
+    <div class="accomplishments-grid">
+      <!-- Scripps Spelling Bee -->
+      <div class="accomplishment-card">
+        <img src="spelling bee1.jpg" alt="Spelling Bee 1">
+        <img src="spelling bee2.jpg" alt="Spelling Bee 2">
+        <img src="spelling bee3.png" alt="Spelling Bee 3">
+        <h3>Scripps Spelling Bee Champion</h3>
+        <p>Participated multiple times, demonstrating exceptional vocabulary mastery and performance under pressure.</p>
+        <ul style="color:#cbd5e1; margin-left:20px; line-height:1.8;">
+          <li>Won at the school level 3 times</li>
+          <li>Placed 3rd in the county</li>
+          <li>Placed 4th in the county</li>
+        </ul>
+        <span class="achievement-badge">School Champion × 3</span>
+      </div>
 
-            <!-- NJ SLA Good Score -->
-            <div class="accomplishment-card">
-                <img src="NJSLAGOODSCORE.jpg" alt="NJ SLA Good Score">
-                <h3>NJSLA High Score</h3>
-                <p>Scored over 800 on the NJ Statewide Learning Assessment (NJSLA), showing strong academic performance in multiple subjects.</p>
-                <p>Photo with my dad and principal holding the certificate.</p>
-                <span class="achievement-badge">Score ≥ 800</span>
-            </div>
-        </div>
+      <!-- Women's Suffrage History -->
+      <div class="accomplishment-card">
+        <img src="wsh1.jpg" alt="Women's Suffrage 1">
+        <img src="wsh2.jpg" alt="Women's Suffrage 2">
+        <h3>Women's Suffrage History Project</h3>
+        <p>Won the Women's Suffrage History Month competition, showcasing research skills, historical understanding, and presentation abilities.</p>
+        <p>Presented my project at the Museum of Jersey City History (Van Wagenen House), demonstrating public speaking skills.</p>
+        <span class="achievement-badge">Competition Winner</span>
+      </div>
+
+      <!-- NJ SLA Good Score -->
+      <div class="accomplishment-card">
+        <img src="NJSLAGOODSCORE.jpg" alt="NJSLA Good Score">
+        <h3>NJSLA High Score</h3>
+        <p>Scored over 800 on the NJ Statewide Learning Assessment (NJSLA), showing strong academic performance in multiple subjects.</p>
+        <p>Photo with my dad and principal holding the certificate.</p>
+        <span class="achievement-badge">Score ≥ 800</span>
+      </div>
     </div>
+  </div>
 </section>
 
 <footer>
-    <div class="container">
-        <p>&copy; 2025 Rayan Zafar. All rights reserved.</p>
-        <div class="social-links">
-            <a href="mailto:rmzbuilt@gmail.com">📧 rmzbuilt@gmail.com</a>
-        </div>
-        <p style="margin-top:20px; font-size:0.9rem;">Jersey City, NJ • 8th Grade Student • Aspiring AI Developer</p>
+  <div class="container">
+    <p>&copy; 2025 Rayan Zafar. All rights reserved.</p>
+    <div class="social-links">
+      <a href="mailto:rmzbuilt@gmail.com">📧 rmzbuilt@gmail.com</a>
     </div>
+    <p style="margin-top:20px; font-size:0.9rem;">Jersey City, NJ • 8th Grade Student • Aspiring AI Developer</p>
+  </div>
 </footer>
 
 <script>
-    function toggleMenu() {
-        document.getElementById('navLinks').classList.toggle('active');
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('active');
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.style.opacity='1';
+      entry.target.style.transform='translateY(0)';
     }
+  });
+}, { threshold:0.1 });
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.style.opacity='1';
-                entry.target.style.transform='translateY(0)';
-            }
-        });
-    }, { threshold:0.1 });
-
-    document.querySelectorAll('.accomplishment-card').forEach((el,index)=>{
-        el.style.opacity='0';
-        el.style.transform='translateY(20px)';
-        el.style.transition=`opacity 0.6s ease ${index*0.2}s, transform 0.6s ease ${index*0.2}s`;
-        observer.observe(el);
-    });
+document.querySelectorAll('.accomplishment-card').forEach((el,index)=>{
+  el.style.opacity='0';
+  el.style.transform='translateY(20px)';
+  el.style.transition=`opacity 0.6s ease ${index*0.2}s, transform 0.6s ease ${index*0.2}s`;
+  observer.observe(el);
+});
 </script>
 </body>
 </html>
