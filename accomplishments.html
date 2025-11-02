@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rayan Zafar - Accomplishments</title>
     <style>
-        /* ===== Global Styles ===== */
         * {
             margin: 0;
             padding: 0;
@@ -155,38 +154,41 @@
             font-weight: 600;
         }
 
-        /* ===== Image Gallery ===== */
+        /* Gallery Styles */
         .gallery {
             display: flex;
-            gap: 10px;
-            justify-content: center;
+            gap: 20px;
             flex-wrap: wrap;
-            margin-top: 15px;
+            justify-content: center;
+            margin-top: 20px;
         }
 
-        .gallery img {
-            width: 120px;
-            border-radius: 8px;
-            cursor: pointer;
+        .gallery a img {
+            width: 200px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
             transition: transform 0.3s ease;
+            border: 2px solid rgba(59, 130, 246, 0.3);
         }
 
-        .gallery img:hover {
+        .gallery a img:hover {
             transform: scale(1.05);
+            border-color: #3b82f6;
         }
 
         /* Lightbox */
         .lightbox {
+            display: none;
             position: fixed;
+            z-index: 10000;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background: rgba(0,0,0,0.9);
-            display: none;
             justify-content: center;
             align-items: center;
-            z-index: 2000;
         }
 
         .lightbox img {
@@ -256,8 +258,9 @@
                 grid-template-columns: 1fr;
             }
 
-            .gallery img {
-                width: 90px;
+            .gallery a img {
+                width: 100%;
+                height: auto;
             }
         }
 
@@ -266,19 +269,12 @@
         }
 
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px);}
+            to { opacity: 1; transform: translateY(0);}
         }
     </style>
 </head>
 <body>
-    <!-- ===== Navigation ===== -->
     <nav>
         <div class="container">
             <div class="logo">RZ</div>
@@ -293,15 +289,12 @@
         </div>
     </nav>
 
-    <!-- ===== Accomplishments Section ===== -->
     <section>
         <div class="container">
             <h1 class="fade-in">Accomplishments</h1>
             <p class="page-intro fade-in">Recognition and achievements beyond coding and technology.</p>
             
             <div class="accomplishments-grid">
-
-                <!-- Spelling Bee -->
                 <div class="accomplishment-card">
                     <div class="accomplishment-icon">🏆</div>
                     <h3>Scripps Spelling Bee Champion</h3>
@@ -312,48 +305,44 @@
                         <li>Placed 3rd in the entire county</li>
                         <li>Placed 4th in the entire county</li>
                     </ul>
-
-                    <!-- Spelling Bee Images -->
-                    <div class="gallery">
-                        <a href="#img1"><img src="images/accomplishments/spelling bee1.jpeg" alt="Spelling Bee 1"></a>
-                        <a href="#img2"><img src="images/accomplishments/spelling bee2.jpeg" alt="Spelling Bee 2"></a>
-                        <a href="#img3"><img src="images/accomplishments/spelling bee3.jpeg" alt="Spelling Bee 3"></a>
-                    </div>
-
-                    <div style="text-align: center; margin-top: 10px;">
+                    <div style="text-align: center;">
                         <span class="achievement-badge">School Champion × 3</span>
                     </div>
-                </div>
 
-                <!-- Women's Suffrage History -->
+                    <!-- Spelling Bee Gallery -->
+                    <div class="gallery">
+                        <a href="#img1"><img src="spelling bee1.jpg" alt="Spelling Bee 1"></a>
+                        <a href="#img2"><img src="spelling bee2.jpg" alt="Spelling Bee 2"></a>
+                        <a href="#img3"><img src="spelling bee3.png" alt="Spelling Bee 3"></a>
+                    </div>
+                </div>
+                
                 <div class="accomplishment-card">
                     <div class="accomplishment-icon">🏛️</div>
                     <h3>Women's Suffrage History Project</h3>
                     <p>Won the Women's Suffrage History Month competition, showcasing exceptional research skills, historical understanding, and presentation abilities.</p>
                     <p style="margin-top: 15px;"><strong>Recognition:</strong> Presented my project at the Museum of Jersey City History (Van Wagenen House), sharing my research with the community and demonstrating public speaking skills.</p>
-
-                    <!-- WSH Images -->
-                    <div class="gallery">
-                        <a href="#img4"><img src="images/accomplishments/wsh1.jpeg" alt="WSH 1"></a>
-                        <a href="#img5"><img src="images/accomplishments/wsh2.jpeg" alt="WSH 2"></a>
+                    <div style="text-align: center;">
+                        <span class="achievement-badge">Competition Winner</span>
                     </div>
 
-                    <div style="text-align: center; margin-top: 10px;">
-                        <span class="achievement-badge">Competition Winner</span>
+                    <!-- WSH Gallery -->
+                    <div class="gallery">
+                        <a href="#img4"><img src="wsh1.jpg" alt="WSH 1"></a>
+                        <a href="#img5"><img src="wsh2.jpg" alt="WSH 2"></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== Lightbox Elements ===== -->
-    <div id="img1" class="lightbox"><a href="#_"><img src="images/accomplishments/spelling bee1.jpeg" alt="Spelling Bee 1"></a></div>
-    <div id="img2" class="lightbox"><a href="#_"><img src="images/accomplishments/spelling bee2.jpeg" alt="Spelling Bee 2"></a></div>
-    <div id="img3" class="lightbox"><a href="#_"><img src="images/accomplishments/spelling bee3.jpeg" alt="Spelling Bee 3"></a></div>
-    <div id="img4" class="lightbox"><a href="#_"><img src="images/accomplishments/wsh1.jpeg" alt="WSH 1"></a></div>
-    <div id="img5" class="lightbox"><a href="#_"><img src="images/accomplishments/wsh2.jpeg" alt="WSH 2"></a></div>
+    <!-- Lightbox Divs -->
+    <div id="img1" class="lightbox"><a href="#_"><img src="spelling bee1.jpg" alt="Spelling Bee 1"></a></div>
+    <div id="img2" class="lightbox"><a href="#_"><img src="spelling bee2.jpg" alt="Spelling Bee 2"></a></div>
+    <div id="img3" class="lightbox"><a href="#_"><img src="spelling bee3.png" alt="Spelling Bee 3"></a></div>
+    <div id="img4" class="lightbox"><a href="#_"><img src="wsh1.jpg" alt="WSH 1"></a></div>
+    <div id="img5" class="lightbox"><a href="#_"><img src="wsh2.jpg" alt="WSH 2"></a></div>
 
-    <!-- ===== Footer ===== -->
     <footer>
         <div class="container">
             <p>&copy; 2025 Rayan Zafar. All rights reserved.</p>
@@ -369,7 +358,6 @@
             document.getElementById('navLinks').classList.toggle('active');
         }
 
-        // Fade-in animation
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
